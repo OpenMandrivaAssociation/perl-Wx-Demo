@@ -1,18 +1,16 @@
+%define upstream_name    Wx-Demo
+%define upstream_version 0.10
 
-%define realname   Wx-Demo
-%define version    0.10
-%define release    %mkrel 1
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
+License:    GPL+ or Artistic
 Group:      Development/Perl
 Summary:    The wxPerl demo
-Source:     http://www.cpan.org/modules/by-module/Wx/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Wx/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Class::Accessor::Fast)
 BuildRequires: perl(File::Slurp)
 BuildRequires: perl(File::Spec)
@@ -21,14 +19,14 @@ BuildRequires: perl(IO::Scalar)
 BuildRequires: perl(Module::Pluggable)
 BuildRequires: perl(UNIVERSAL::require)
 BuildRequires: perl(Wx)
-
 BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
-no description found
+wxPerl demo, with lots of snippets using various wxwidgets features.
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -50,5 +48,4 @@ rm -rf %buildroot
 /usr/bin/wxperl_demo.pl
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
 
