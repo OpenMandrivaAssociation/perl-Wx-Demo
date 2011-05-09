@@ -1,9 +1,9 @@
 %define upstream_name    Wx-Demo
-%define upstream_version 0.12
+%define upstream_version 0.13
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 License:    GPL+ or Artistic
 Group:      Development/Perl
