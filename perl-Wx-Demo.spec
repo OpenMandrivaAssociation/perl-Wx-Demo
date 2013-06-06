@@ -1,19 +1,18 @@
 %define upstream_name    Wx-Demo
-%define upstream_version 0.13
-
+%define upstream_version 0.19
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(Wx::PlHeaderColumn\\)|perl\\(Wx::PlHeaderCtrl\\)'
 %endif
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%perl_convert_version 0.19
+Release:	1
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Summary:	The wxPerl demo
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Wx/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Wx/Wx-Demo-0.19.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Class::Accessor::Fast)
@@ -47,3 +46,4 @@ perl Makefile.PL INSTALLDIRS=vendor
 %{_bindir}/wxperl_demo.pl
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
+
