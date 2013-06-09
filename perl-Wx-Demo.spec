@@ -1,12 +1,12 @@
 %define upstream_name    Wx-Demo
 %define upstream_version 0.19
 %if %{_use_internal_dependency_generator}
-%define __noautoreq 'perl\\(Wx::PlHeaderColumn\\)|perl\\(Wx::PlHeaderCtrl\\)'
+%define __noautoreq 'perl\\(Wx::PlHeaderColumn\\)|perl\\(Wx::PlHeaderCtrl\\)|perl\\((Wx::DemoHints::CoreHintBase\\)'
 %endif
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 0.19
-Release:	1
+Release:	2
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
