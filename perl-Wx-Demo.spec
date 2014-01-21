@@ -1,6 +1,6 @@
 %define upstream_name    Wx-Demo
 %define upstream_version 0.21
-%define __noautoreq 'perl\\(Wx::PlHeaderColumn\\)|perl\\(Wx::PlHeaderCtrl\\)|perl\\((Wx::Demo.*'
+%define __noautoreq 'perl\\(Wx::PlHeaderColumn\\)|perl\\(Wx::PlHeaderCtrl\\)|perl\\(Wx::Demo.*'
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
