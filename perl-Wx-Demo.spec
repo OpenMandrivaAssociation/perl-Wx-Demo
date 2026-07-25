@@ -3,15 +3,15 @@
 %define __noautoreq 'perl\\(Wx::PlHeaderColumn\\)|perl\\(Wx::PlHeaderCtrl\\)|perl\\(Wx::Demo.*'
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	5
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Summary:	The wxPerl demo
 
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Wx/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://wxperl.sourceforge.net
+Source0:	https://cpan.metacpan.org/authors/id/M/MD/MDOOTSON/Wx-Demo-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
