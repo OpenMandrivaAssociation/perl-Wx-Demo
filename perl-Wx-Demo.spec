@@ -1,17 +1,16 @@
 %define upstream_name    Wx-Demo
-%define upstream_version 0.22
 %define __noautoreq 'perl\\(Wx::PlHeaderColumn\\)|perl\\(Wx::PlHeaderCtrl\\)|perl\\(Wx::Demo.*'
 
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	0.22
+Release:	6
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Summary:	The wxPerl demo
 
 Url:		https://wxperl.sourceforge.net
-Source0:	https://cpan.metacpan.org/authors/id/M/MD/MDOOTSON/Wx-Demo-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/M/MD/MDOOTSON/Wx-Demo-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -29,7 +28,7 @@ BuildArch:	noarch
 wxPerl demo, with lots of snippets using various wxwidgets features.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
